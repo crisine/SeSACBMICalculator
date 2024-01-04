@@ -50,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-0R-5gg">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cm 단위 입력 (40~300)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-0R-5gg">
                                 <rect key="frame" x="20" y="319" width="353" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -64,7 +64,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWQ-fO-vMn">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="kg 단위 입력 (20~200)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWQ-fO-vMn">
                                 <rect key="frame" x="20" y="398" width="353" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
@@ -104,6 +104,35 @@
                                     <action selector="didCalculateBMIButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fpx-M0-sCE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-lE-swf">
+                                <rect key="frame" x="20" y="189" width="45" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ZhE-g3-1uR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJI-KP-oIV">
+                                <rect key="frame" x="20" y="221" width="132.66666666666666" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="jkJ-Me-SJg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndEditingInNicknameTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Zyh-UZ-5TH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TR7-8H-leS">
+                                <rect key="frame" x="20" y="567" width="353" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="유저 정보 초기화하기"/>
+                                <connections>
+                                    <action selector="didResetUserInfoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kk-hx-fTP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -111,17 +140,25 @@
                             <constraint firstItem="7kr-0R-5gg" firstAttribute="top" secondItem="HXK-y7-dKM" secondAttribute="bottom" constant="8" id="0EF-pd-mrV"/>
                             <constraint firstItem="tWQ-fO-vMn" firstAttribute="top" secondItem="cWB-T5-W9E" secondAttribute="bottom" constant="8" id="1Pa-fj-CDW"/>
                             <constraint firstItem="tWQ-fO-vMn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Bd-1x-1XR"/>
+                            <constraint firstItem="TR7-8H-leS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7dM-WK-ya1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TsO-zC-4Og" secondAttribute="trailing" constant="20" id="8nC-Mu-fUE"/>
                             <constraint firstItem="yVS-wt-H3D" firstAttribute="top" secondItem="tWQ-fO-vMn" secondAttribute="bottom" constant="10" id="B0f-0N-4yz"/>
+                            <constraint firstItem="mJI-KP-oIV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FTe-0v-gi6"/>
+                            <constraint firstItem="TR7-8H-leS" firstAttribute="top" secondItem="TsO-zC-4Og" secondAttribute="bottom" constant="20" id="Gf3-EQ-4Hp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TR7-8H-leS" secondAttribute="trailing" constant="20" id="GfV-Vf-2P5"/>
                             <constraint firstItem="cWB-T5-W9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JgA-wN-egm"/>
                             <constraint firstItem="DmK-Fx-OEr" firstAttribute="top" secondItem="Anp-Zv-bBf" secondAttribute="bottom" constant="10" id="Qj9-j1-NHX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yVS-wt-H3D" secondAttribute="trailing" constant="20" id="SNj-Hj-2dz"/>
                             <constraint firstItem="Anp-Zv-bBf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U04-Km-sjM"/>
                             <constraint firstItem="7kr-0R-5gg" firstAttribute="top" secondItem="TR1-ij-cwQ" secondAttribute="bottom" id="Uac-G8-HAV"/>
+                            <constraint firstItem="VG3-lE-swf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vfb-Sz-gUv"/>
                             <constraint firstItem="Anp-Zv-bBf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VzR-a2-oVx"/>
                             <constraint firstItem="TR1-ij-cwQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Zq4-6R-Vea"/>
+                            <constraint firstItem="mJI-KP-oIV" firstAttribute="width" secondItem="DmK-Fx-OEr" secondAttribute="width" id="b9u-ke-9ZJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7kr-0R-5gg" secondAttribute="trailing" constant="20" id="bWo-Sr-o4C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TR1-ij-cwQ" secondAttribute="trailing" constant="20" id="i3H-Kq-gmO"/>
+                            <constraint firstItem="VG3-lE-swf" firstAttribute="top" secondItem="DmK-Fx-OEr" secondAttribute="bottom" constant="20" id="iIP-us-wlz"/>
+                            <constraint firstItem="mJI-KP-oIV" firstAttribute="top" secondItem="VG3-lE-swf" secondAttribute="bottom" constant="10" id="ktv-oa-Lb0"/>
                             <constraint firstItem="TsO-zC-4Og" firstAttribute="top" secondItem="yVS-wt-H3D" secondAttribute="bottom" constant="40" id="lbZ-B5-NRo"/>
                             <constraint firstItem="HXK-y7-dKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mEQ-6g-xRR"/>
                             <constraint firstItem="cWB-T5-W9E" firstAttribute="top" secondItem="7kr-0R-5gg" secondAttribute="bottom" constant="20" id="nkd-Rf-3ud"/>
@@ -134,7 +171,9 @@
                     <connections>
                         <outlet property="calculateBMIButton" destination="TsO-zC-4Og" id="Jgn-O3-r1K"/>
                         <outlet property="heightInputTextField" destination="7kr-0R-5gg" id="RJQ-vT-gpM"/>
+                        <outlet property="nicknameTextField" destination="mJI-KP-oIV" id="Ix9-gR-bbg"/>
                         <outlet property="randomInputButton" destination="yVS-wt-H3D" id="XRz-xf-aol"/>
+                        <outlet property="resetUserInfoButton" destination="TR7-8H-leS" id="k8w-Oz-Gxp"/>
                         <outlet property="weightInputTextField" destination="tWQ-fO-vMn" id="vQb-V4-daq"/>
                     </connections>
                 </viewController>
@@ -147,6 +186,9 @@
         <image name="image" width="147" height="229.33332824707031"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
